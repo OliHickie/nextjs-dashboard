@@ -1,0 +1,28 @@
+// app/layout.module.scss
+$navWidth: 80px;
+
+.mainNav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $navWidth;
+  padding: 10px;
+  z-index: 10;
+}
+
+.secondaryNav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: $navWidth;
+  z-index: 10;
+}
+
+.mainContent {
+  margin-left: $navWidth;
+  margin-right: $navWidth;
+  position: relative;
+  z-index: 1;
+}
