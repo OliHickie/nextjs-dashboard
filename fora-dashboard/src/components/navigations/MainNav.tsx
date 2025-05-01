@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { MainNavItem } from '@/types/NavigationItems.types';
 
 // styles
 import styles from './NavigationStyles.module.scss';
@@ -20,10 +21,11 @@ const secondaryItems = [
   { href: '/logout', icon: '/assets/Log-out.svg', label: 'Log out', size: 18 },
 ];
 
+// Main navigation component
 const MainNav: React.FC = () => {
   const pathname = usePathname();
 
-  const renderLinks = (items: typeof navItems) =>
+  const renderLinks = (items: MainNavItem[]) =>
     items.map(({ href, icon, label, size }) => (
       <li key={label} className={styles.listItem}>
         <Link
@@ -43,7 +45,7 @@ const MainNav: React.FC = () => {
     ));
 
   return (
-    <nav className={styles.container} aria-label="Main Navigation">
+    <nav className={styles.container}>
       <div>
         <Image
           src="/assets/fora-logo.png"

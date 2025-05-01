@@ -1,6 +1,8 @@
 'use client'
 
 import Image from 'next/image';
+import { SecondaryNavItem } from '@/types/NavigationItems.types';
+import SideMenu from '@/components/sideMenu/sideMenu';
 
 // styles
 import styles from './NavigationStyles.module.scss';
@@ -14,7 +16,7 @@ const navItems = [
 
 const SecondaryNav: React.FC = () => {
 
-  const renderLinks = (items: typeof navItems) =>
+  const renderLinks = (items: SecondaryNavItem[]) =>
     items.map(({ icon, label, size }) => (
       <li key={label} className={styles.listItem}>
         <button className={styles.listLink} type="button">
@@ -31,13 +33,11 @@ const SecondaryNav: React.FC = () => {
     ));
 
   return (
-    <aside
-      className={`${styles.container} ${styles.secondaryNav}`} 
-      aria-label="Secondary Navigation"
-    >
+    <aside className={`${styles.container} ${styles.secondaryNav}`}>
       <ul className={styles.mainList}>
         {renderLinks(navItems)}
       </ul>
+      <SideMenu />
     </aside>
   );
 };
