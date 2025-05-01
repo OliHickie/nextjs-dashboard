@@ -7,6 +7,11 @@
   padding: 2rem 1rem;
   text-align: center;
   border-right: 2px solid #EEE;
+
+  &.secondaryNav {
+    border-right: none;
+    border-left: 2px solid #EEE;
+  }
 }
 
 .logo {
@@ -21,7 +26,6 @@
   gap: 1rem;
 
   .listItem {
-    list-style: none;
 
     .listLink {
       display: flex;
@@ -40,6 +44,10 @@
       &.active {
         background-color: #f3f0e7;
       }
+    }
+
+    button {
+      all: unset;
     }
   }
 }

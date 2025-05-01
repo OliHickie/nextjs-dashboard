@@ -19,15 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav className={styles.mainNav}>
+        <div className={styles.mainNav}>
           <MainNav />
-        </nav>
+        </div>
         <main className={styles.mainContent}>
           {children}
         </main>
-        <aside className={styles.secondaryNav}>
+        <div className={styles.secondaryNav}>
           <SecondaryNav />
-        </aside>
+        </div>
       </body>
     </html>
   );

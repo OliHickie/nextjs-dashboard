@@ -28,16 +28,22 @@ const MainNav: React.FC = () => {
       <li key={label} className={styles.listItem}>
         <Link
           href={href}
-          className={`${styles.listLink}, ${pathname === href ? styles.active : ''}`}
+          className={`${styles.listLink} ${pathname === href ? styles.active : ''}`}
         >
-          <Image src={icon} alt="" width={size} height={size} className={styles.icon} />
+          <Image
+            src={icon} 
+            alt="" 
+            width={size} 
+            height={size} 
+            className={styles.icon} 
+          />
           <span className="sr-only">{label}</span>
         </Link>
       </li>
     ));
 
   return (
-    <div className={styles.container}>
+    <nav className={styles.container} aria-label="Main Navigation">
       <div>
         <Image
           src="/assets/fora-logo.png"
@@ -53,7 +59,7 @@ const MainNav: React.FC = () => {
       <ul className={styles.secondaryList}>
         {renderLinks(secondaryItems)}
       </ul>
-    </div>
+    </nav>
   );
 };
 
