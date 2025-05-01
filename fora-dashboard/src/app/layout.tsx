@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import styles from './layout.module.scss'
 
 // Components
-import MainNav from "@/components/MainNav/MainNav";
-import SecondaryNav from "@/components/SecondaryNav/SecondaryNav";
+import MainNav from "@/components/navigations/MainNav";
+import SecondaryNav from "@/components/navigations/SecondaryNav";
 
 
 export const metadata: Metadata = {

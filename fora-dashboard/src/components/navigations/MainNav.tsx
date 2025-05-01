@@ -3,9 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import styles from './MainNav.module.scss';
+
+// styles
+import styles from './NavigationStyles.module.scss';
 import '@/styles/global.scss';
 
+// Nav links
 const navItems = [
   { href: '/', icon: '/assets/Icon.svg', label: 'Home', size: 18 },
   { href: '/calendar', icon: '/assets/Calendar.svg', label: 'Calendar', size: 18 },
@@ -22,10 +25,10 @@ const MainNav: React.FC = () => {
 
   const renderLinks = (items: typeof navItems) =>
     items.map(({ href, icon, label, size }) => (
-      <li key={label}>
+      <li key={label} className={styles.listItem}>
         <Link
           href={href}
-          className={`${pathname === href ? styles.active : ''}`}
+          className={`${styles.listLink}, ${pathname === href ? styles.active : ''}`}
         >
           <Image src={icon} alt="" width={size} height={size} className={styles.icon} />
           <span className="sr-only">{label}</span>
