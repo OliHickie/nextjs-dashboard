@@ -1,0 +1,12 @@
+@import '../../styles/_variables.scss';
+
+.container {
+  height: 100vh;
+  background-color: #F9F9F9;
+  width: 25rem;
+  position: absolute;
+  top: 0;
+  right: $navWidth;
+  border-left: 2px solid #EEE;
+  border-radius: 20px 0 0 20px;
+}
