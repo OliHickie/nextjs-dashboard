@@ -1,0 +1,55 @@
+.container {
+  padding: 1rem 0.5rem 0.5rem;
+  text-align: left;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.headerText {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.32px;
+  font-weight: 600;
+}
+
+.time {
+  letter-spacing: -0.32px;
+}
+
+.description {
+  max-width: 23ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 0.75rem;
+}
+
+.controlsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.controlButton {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  background-color: #9BA5B7;
+  &.active {
+    background-color: #545F71;
+  }
+}
