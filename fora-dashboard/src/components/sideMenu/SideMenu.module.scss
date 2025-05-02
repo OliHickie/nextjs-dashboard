@@ -1,4 +1,5 @@
-@import '../../styles/_variables.scss';
+@use '../../styles/_variables.scss' as *;
+
 
 .container {
   height: 100vh;
