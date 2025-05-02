@@ -1,8 +1,8 @@
 {
-  "tickets": [
+  "data": [
     {
       "id": 1,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -10,15 +10,15 @@
     },
     {
       "id": 2,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
-      "createdAt": "2025-05-01T15:30:00Z"
+      "createdAt": "2025-04-29T15:30:00Z"
     },
     {
       "id": 3,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
@@ -82,7 +82,7 @@
     },
     {
       "id": 11,
-      "title": "ACME CORP",
+      "title": "Acme Corp",
       "description": "Broken thingamy machine in the lorem ipsum dolor sit amet!",
       "status": "Open",
       "priority": "High",
