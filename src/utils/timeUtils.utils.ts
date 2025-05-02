@@ -15,3 +15,9 @@ export const timeAgo = (dateInput: string | Date): string => {
   }
 }
 
+export const sortByDate = (a: string | Date, b: string | Date): number => {
+  const dateA = new Date(a).getTime();
+  const dateB = new Date(b).getTime();
+
+  return dateB - dateA;
+}
