@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { SecondaryNavItem } from '@/types/NavigationItems.types';
 import SideMenu from '@/components/sideMenu/sideMenu';
@@ -15,17 +16,33 @@ const navItems = [
 ];
 
 const SecondaryNav: React.FC = () => {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState<boolean>(false);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+
+  const handleItemClick = (label: string) => {
+    if (activeItem === label) {
+      setIsSideMenuOpen(!isSideMenuOpen);
+      setActiveItem(null);
+      return;
+    }
+    setActiveItem(label);
+    setIsSideMenuOpen(true);
+  };
 
   const renderLinks = (items: SecondaryNavItem[]) =>
     items.map(({ icon, label, size }) => (
       <li key={label} className={styles.listItem}>
-        <button className={styles.listLink} type="button">
-          <Image 
+        <button
+          className={`${styles.listLink} ${activeItem === label ? styles.active : ''}`}
+          type="button"
+          onClick={() => handleItemClick(label)}
+        >
+          <Image
             src={icon}
-            alt="" 
-            width={size} 
-            height={size} 
-            className={styles.icon} 
+            alt=""
+            width={size}
+            height={size}
+            className={styles.icon}
           />
           <span className="sr-only">{label}</span>
         </button>
@@ -34,10 +51,8 @@ const SecondaryNav: React.FC = () => {
 
   return (
     <aside className={`${styles.container} ${styles.secondaryNav}`}>
-      <ul className={styles.mainList}>
-        {renderLinks(navItems)}
-      </ul>
-      <SideMenu />
+      <ul className={styles.mainList}>{renderLinks(navItems)}</ul>
+      {isSideMenuOpen && <SideMenu />}
     </aside>
   );
 };
