@@ -2,6 +2,10 @@
 
 import { getTickets } from '@/services/getTickets.service';
 import { useEffect, useState } from 'react';
+import { sortByDate } from '@/utils/timeUtils.utils';
+
+//components
+import TicketItem from '../ticketItem/TicketItem';
 
 // types
 import { Ticket } from '@/types/Tickets.types';
@@ -17,7 +21,9 @@ const SideMenu : React.FC = () => {
     const getData = async () => {
       try {
         const data = await getTickets();
-        setTickets(data);
+        const sortedTickets = data.sort((a, b) => sortByDate(a.createdAt, b.createdAt));
+
+        setTickets(sortedTickets);
       } catch (err) {
         // TODO: Handle API errors
         console.error('Error fetching tickets:', err);
@@ -36,7 +42,7 @@ const SideMenu : React.FC = () => {
       ) : (
         <ul>
           {tickets.map((ticket) => (
-            <li key={ticket.id}>{ticket.title}</li>
+            <TicketItem key={ticket.id} ticket={ticket} />
           ))}
         </ul>
       )}
