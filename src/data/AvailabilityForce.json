@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "company": {
+        "id": 1,
+        "name": "ACME CORP"
+      },
+      "name": "MR.0X",
+      "time": {
+        "start": "2025-05-04T08:30:00Z",
+        "end": "2025-05-04T10:30:00Z"
+      },
+      "createdAt": "2025-05-01T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "company": {
+        "id": 1,
+        "name": "ACME CORP"
+      },
+      "name": "MR.0X",
+      "time": {
+        "start": "2025-05-04T08:30:00Z",
+        "end": "2025-05-04T10:30:00Z"
+      },
+      "createdAt": "2025-05-01T08:30:00Z"
+    },
+    {
+      "id": 3,
+      "company": {
+        "id": 1,
+        "name": "ACME CORP"
+      },
+      "name": "MR.0X",
+      "time": {
+        "start": "2025-05-04T08:30:00Z",
+        "end": "2025-05-04T10:30:00Z"
+      },
+      "createdAt": "2025-05-01T08:30:00Z"
+    },
+    {
+      "id": 4,
+      "company": {
+        "id": 1,
+        "name": "ACME CORP"
+      },
+      "name": "MR.0X",
+      "time": {
+        "start": "2025-05-04T08:30:00Z",
+        "end": "2025-05-04T10:30:00Z"
+      },
+      "createdAt": "2025-05-01T08:30:00Z"
+    },
+    {
+      "id": 5,
+      "company": {
+        "id": 1,
+        "name": "ACME CORP"
+      },
+      "name": "MR.0X",
+      "time": {
+        "start": "2025-05-04T08:30:00Z",
+        "end": "2025-05-04T10:30:00Z"
+      },
+      "createdAt": "2025-05-01T08:30:00Z"
+    }
+  ]
+}
