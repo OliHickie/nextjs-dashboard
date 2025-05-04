@@ -26,7 +26,7 @@ const BuildingNameMenu = () => {
     fetchBuildingNames();
   }, []);
 
-  return buildings ? <SelectMenu options={buildings} className={styles.selectMenu} /> : null;
+  return buildings ? <SelectMenu options={buildings} className={styles.selectMenu} ariaLabel="Building name select" /> : null;
 };
 
 export default BuildingNameMenu;

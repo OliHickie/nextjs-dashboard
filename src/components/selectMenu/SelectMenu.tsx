@@ -6,12 +6,13 @@ type SelectMenuProps = {
     label: string;
   }[];
   className?: string;
+  ariaLabel?: string;
 };
 
-const SelectMenu: React.FC<SelectMenuProps> = ({ options, className }: SelectMenuProps) => {
+const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel }: SelectMenuProps) => {
   return (
     <div >
-      <select className={className}>
+      <select className={className} aria-label={ariaLabel}>
         {options.map((option) => (
           <option key={option.id} value={option.id}>
             {option.label}
