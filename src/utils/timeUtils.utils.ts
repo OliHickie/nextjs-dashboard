@@ -35,7 +35,7 @@ export const formatTime = (dateInput: string): string => {
 
 // returns Thursday 19th
 export const formatDayOfWeek = (dateInput: string | Date): string => {
-  const date = typeof dateInput === 'string' ? parseISO(dateInput) : dateInput;
-  return format(date, 'EEEE do'); // e.g., "Thursday 19th"
+  const date = format(new Date(dateInput), 'yyyy-MM-dd');
+  return format(date, 'EEEE do');
 };
 
