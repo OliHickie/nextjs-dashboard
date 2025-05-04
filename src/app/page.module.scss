@@ -1,0 +1,8 @@
+.contentLayout {
+  display: flex;
+  gap: 1rem;
+
+  & .leftSection, & .rightSection {
+    flex: 1;
+  }
+}

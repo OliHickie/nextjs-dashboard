@@ -1,0 +1,43 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.meetingsList {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.75rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+  &:hover {
+    border-color: #545F71;
+  }
+
+  & h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .checkIn {
+    background-color: #545F71;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
