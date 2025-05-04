@@ -1,13 +1,14 @@
 
 import { AvailabilityForce } from "@/types/AvailabilityForce.types";
 import { formatTime } from "@/utils/timeUtils.utils";
+import Image from "next/image";
 
 import styles from "./Meetings.module.scss";
 
 const MeetingItem = ({ meeting }: { meeting: AvailabilityForce }) => {
 
   return (
-    <li className={styles.item}>
+    <li className={styles.item} aria-label={`Check in for ${meeting.name}`} role="button" tabIndex={0}>
       <div>
         <h3>
           {meeting.name} - {meeting.company.name}
@@ -17,7 +18,12 @@ const MeetingItem = ({ meeting }: { meeting: AvailabilityForce }) => {
         </p>
       </div>
       <div className={styles.checkIn}>
-        <img src="/assets/Check-in-white.svg" alt="" />
+        <Image
+          src="/assets/Check-in-white.svg"
+          alt=""
+          width={24}
+          height={24}
+        />
         <span className="sr-only">Check in</span>
       </div>
     </li>
