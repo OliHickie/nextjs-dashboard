@@ -36,7 +36,11 @@ const TicketItem: React.FC<{ ticket: Ticket }> = ({ ticket }) => {
             key={index}
             className={`${styles.controlButton} ${activeButton === index ? styles.active : ''}`}
             onClick={() => handleButtonClick(index)}
-          ></button>
+            aria-label={`Select control ${index + 1}`}
+            aria-pressed={activeButton === index}
+          >
+            <span className="sr-only">{`Select control ${index + 1}`}</span>
+          </button>
         ))}
       </div>
     </div>
