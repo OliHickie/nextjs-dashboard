@@ -16,13 +16,17 @@ const CustomerForceItem: React.FC<{ item: Item; type: string }> = ({ item, type 
   }
 
   return (
-    <li className={styles.item}>
+    <li 
+      className={styles.item} 
+      aria-label={`${type} for ${item.room}`} 
+      role="button" 
+      tabIndex={0}
+    >
       <div>
-
-      <h3>{item.room} - {item.company}</h3>
-      <p>{getDate()}</p>
+        <h3>{item.room} - {item.company}</h3>
+        <p>{getDate()}</p>
       </div>
-        <FaChevronRight size={24} />
+        <FaChevronRight size={24} aria-hidden="true" />
     </li>
   );
 };
