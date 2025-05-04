@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import styles from './layout.module.scss'
-
-// Components
 import MainNav from "@/components/navigations/MainNav";
 import SecondaryNav from "@/components/navigations/SecondaryNav";
 

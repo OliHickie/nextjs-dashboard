@@ -1,6 +1,6 @@
-'use-client'
+'use client'
 
-import { getTickets } from '@/services/getTickets.service';
+import { getTickets } from '@/services/getTickets.services';
 import { useEffect, useState } from 'react';
 import { sortByDate } from '@/utils/timeUtils.utils';
 
@@ -24,9 +24,8 @@ const SideMenu : React.FC = () => {
         const sortedTickets = data.sort((a, b) => sortByDate(a.createdAt, b.createdAt));
 
         setTickets(sortedTickets);
-      } catch (err) {
-        // TODO: Handle API errors
-        console.error('Error fetching tickets:', err);
+      } catch (error) {
+        console.error('Error fetching tickets:', error);
       } finally {
         setLoading(false);
       }

@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 
 import { timeAgo } from '@/utils/timeUtils.utils'
  

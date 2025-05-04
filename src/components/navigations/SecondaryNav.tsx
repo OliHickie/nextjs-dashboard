@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { SecondaryNavItem } from '@/types/NavigationItems.types';
-import SideMenu from '@/components/sideMenu/sideMenu';
+import SideMenu from '@/components/sideMenu/SideMenu';
 
 // styles
 import styles from './NavigationStyles.module.scss';
