@@ -1,6 +1,11 @@
 .contentLayout {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 
   & .leftSection, & .rightSection {
     flex: 1;
