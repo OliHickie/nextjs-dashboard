@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { SecondaryNavItem } from '@/types/NavigationItems.types';
-import SideMenu from '@/components/sideMenu/SideMenu';
+import ToolsMenu from '@/components/toolsMenu/ToolsMenu';
 
 // styles
 import styles from './NavigationStyles.module.scss';
@@ -16,17 +16,17 @@ const navItems = [
 ];
 
 const SecondaryNav: React.FC = () => {
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState<boolean>(false);
+  const [isToolsMenuOpen, setIsToolsMenuOpen] = useState<boolean>(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
   const handleItemClick = (label: string) => {
     if (activeItem === label) {
-      setIsSideMenuOpen(!isSideMenuOpen);
+      setIsToolsMenuOpen(!isToolsMenuOpen);
       setActiveItem(null);
       return;
     }
     setActiveItem(label);
-    setIsSideMenuOpen(true);
+    setIsToolsMenuOpen(true);
   };
 
   const renderLinks = (items: SecondaryNavItem[]) =>
@@ -52,7 +52,7 @@ const SecondaryNav: React.FC = () => {
   return (
     <aside className={`${styles.container} ${styles.secondaryNav}`}>
       <ul className={styles.mainList}>{renderLinks(navItems)}</ul>
-      {isSideMenuOpen && <SideMenu />}
+      {isToolsMenuOpen && <ToolsMenu />}
     </aside>
   );
 };

@@ -11,9 +11,9 @@ import TicketItem from '../ticketItem/TicketItem';
 import { Ticket } from '@/types/Tickets.types';
  
 // styles
-import styles from './SideMenu.module.scss';
+import styles from './ToolsMenu.module.scss';
 
-const SideMenu : React.FC = () => {
+const ToolsMenu : React.FC = () => {
   const [tickets, setTickets] = useState<Ticket[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -49,4 +49,4 @@ const SideMenu : React.FC = () => {
   );
 };
 
-export default SideMenu;
+export default ToolsMenu;
