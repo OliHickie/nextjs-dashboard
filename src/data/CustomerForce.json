@@ -1,0 +1,85 @@
+{
+  "data": {
+    "viewings": [
+      {
+        "id": 1,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T14:30:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 2,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T14:30:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 3,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T14:30:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 4,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T14:30:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 5,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T14:30:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      }
+    ],
+    "moves": [
+      {
+        "id": 6,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 7,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 8,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 9,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 10,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      },
+      {
+        "id": 11,
+        "room": "01.0X",
+        "company": "MEGA CORP",
+        "date": "2023-05-04T00:00:00Z",
+        "createdAt": "2025-05-01T08:30:00Z"
+      }
+    ]
+  }
+}
