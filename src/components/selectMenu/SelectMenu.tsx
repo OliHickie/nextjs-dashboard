@@ -6,7 +6,7 @@ type SelectMenuProps = {
     label: string;
   }[];
   className?: string;
-  ariaLabel?: string;
+  ariaLabel: string;
 };
 
 const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel }: SelectMenuProps) => {
