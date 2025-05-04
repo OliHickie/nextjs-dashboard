@@ -1,6 +1,4 @@
-// Created separately to allow for scalability and maintainability
-
-export type Viewing = {
+export type Item = {
   id: number;
   room: string;
   company: string;
@@ -8,15 +6,7 @@ export type Viewing = {
   createdAt: string;
 };
 
-export type Move = {
-  id: number;
-  room: string;
-  company: string;
-  date: string;
-  createdAt: string;
-};
-
-export type CustomerForce = {
-  viewings: Viewing[];
-  moves: Move[];
+export type CustomerForceType = {
+  viewings: Item[];
+  moves: Item[];
 };

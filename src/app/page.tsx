@@ -1,5 +1,6 @@
 import BuildingNameMenu from "@/components/buildingNameMenu/BuildingNameMenu";
 import Meetings from "@/components/meetings/Meetings";
+import CustomerForce from "@/components/customerForce/CustomerForce";
 
 import styles from "./page.module.scss";
 
@@ -16,14 +17,9 @@ export default function Home() {
         <section className={styles.leftSection}>
           <Meetings />
         </section>
-        <div className={styles.rightSection}>
-          <section>
-            hello
-          </section>
-          <section>
-            hello 2
-          </section>
-        </div>
+        <section className={styles.rightSection}>
+          <CustomerForce />
+        </section>
       </div>
     </div>
   );

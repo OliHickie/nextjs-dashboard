@@ -1,7 +1,7 @@
-import { CustomerForce } from "../types/CustomerForce.types";
+import { CustomerForceType } from "../types/CustomerForce.types";
 import data from "@/data/CustomerForce.json";
 
-export const getAvailabilityForce = async (): Promise<CustomerForce> => {
+export const getCustomerForce = async (): Promise<CustomerForceType> => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return data.data;
 };

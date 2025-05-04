@@ -25,7 +25,7 @@ const Meetings: React.FC = () => {
 
   return (
     <>
-    <h2 className={styles.header}>Meetings</h2>
+    <h2 className="global-subheading">Meetings</h2>
     <ul className={styles.meetingsList}>   
       {
         availabilityForce.length > 0 ? (
