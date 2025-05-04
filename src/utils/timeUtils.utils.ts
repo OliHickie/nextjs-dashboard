@@ -1,4 +1,4 @@
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
 
 // returns the time difference between now and the date input in hours or days
 export const timeAgo = (dateInput: string | Date): string => {
