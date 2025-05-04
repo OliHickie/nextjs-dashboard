@@ -8,7 +8,7 @@ import { AvailabilityForce } from "@/types/AvailabilityForce.types";
 import styles from "./Meetings.module.scss";
 
 const Meetings: React.FC = () => {
-  const [availabilityForce, setAvailabilityForce] = useState<AvailabilityForce[]>([]);
+  const [availabilityForce, setAvailabilityForce] = useState<AvailabilityForce[] | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,16 +26,17 @@ const Meetings: React.FC = () => {
   return (
     <>
     <h2 className="global-subheading">Meetings</h2>
-    <ul className={styles.meetingsList}>   
-      {
-        availabilityForce.length > 0 ? (
-          availabilityForce.map((meeting) => (
-            <MeetingItem key={meeting.id} meeting={meeting} />
-          ))
-        ) : (
-          <p>No meetings available</p>
-        )}
-    </ul>
+    { !availabilityForce ? (
+      <p>Loading...</p>
+    ) : availabilityForce.length > 0 ? (
+      <ul className={styles.meetingsList}>
+      {availabilityForce.map((meeting) => (
+        <MeetingItem key={meeting.id} meeting={meeting} />
+      ))}
+      </ul>
+    ) : (
+      <p>No meetings available</p>
+    )}
     </>
   );
 };

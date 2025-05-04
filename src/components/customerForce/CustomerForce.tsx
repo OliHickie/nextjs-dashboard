@@ -29,18 +29,26 @@ const CustomerForce: React.FC = () => {
     <>
       <Viewings>
         {customerForce ? (
-          customerForce.viewings.map((item) => (
-            <CustomerForceItem key={item.id} item={item} type="viewing" />
-          ))
+          customerForce.viewings.length > 0 ? (
+            customerForce.viewings.map((item) => (
+              <CustomerForceItem key={item.id} item={item} type="viewing" />
+            ))
+          ) : (
+            <p>There are no viewings.</p>
+          )
         ) : (
           <p>Loading...</p>
         )}
       </Viewings>
       <Moves>
         {customerForce ? (
-          customerForce.moves.map((item) => (
-            <CustomerForceItem key={item.id} item={item} type="move" />
-          ))
+          customerForce.moves.length > 0 ? (
+            customerForce.moves.map((item) => (
+              <CustomerForceItem key={item.id} item={item} type="move" />
+            ))
+          ) : (
+            <p>There are no moves.</p>
+          )
         ) : (
           <p>Loading...</p>
         )}
