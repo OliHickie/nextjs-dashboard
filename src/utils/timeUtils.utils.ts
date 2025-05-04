@@ -1,3 +1,5 @@
+import { format, parseISO } from 'date-fns';
+
 // returns the time difference between now and the date input in hours or days
 export const timeAgo = (dateInput: string | Date): string => {
   const now = new Date();
@@ -33,20 +35,7 @@ export const formatTime = (dateInput: string): string => {
 
 // returns Thursday 19th
 export const formatDayOfWeek = (dateInput: string | Date): string => {
-  const date = new Date(dateInput);
-
-  const weekday = new Intl.DateTimeFormat('en-GB', { weekday: 'long' }).format(date);
-  const day = date.getDate();
-
-  const getOrdinal = (n: number): string => {
-    if (n >= 11 && n <= 13) return `${n}th`;
-    switch (n % 10) {
-      case 1: return `${n}st`;
-      case 2: return `${n}nd`;
-      case 3: return `${n}rd`;
-      default: return `${n}th`;
-    }
-  };
-
-  return `${weekday} ${getOrdinal(day)}`;
+  const date = typeof dateInput === 'string' ? parseISO(dateInput) : dateInput;
+  return format(date, 'EEEE do'); // e.g., "Thursday 19th"
 };
+
