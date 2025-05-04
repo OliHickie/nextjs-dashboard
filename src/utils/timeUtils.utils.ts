@@ -21,3 +21,10 @@ export const sortByDate = (a: string | Date, b: string | Date): number => {
 
   return dateB - dateA;
 }
+
+export const formatTime = (dateInput: string): string => {
+  const date = new Date(dateInput);
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
