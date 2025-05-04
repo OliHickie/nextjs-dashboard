@@ -8,10 +8,10 @@ import styles from "./Meetings.module.scss";
 const MeetingItem = ({ meeting }: { meeting: AvailabilityForce }) => {
 
   return (
-    <li className={styles.item} aria-label={`Check in for ${meeting.name}`} role="button" tabIndex={0}>
+    <li className={styles.item} aria-label={`Check in for ${meeting.company.name}`} role="button" tabIndex={0}>
       <div>
         <h3>
-          {meeting.name} - {meeting.company.name}
+          {meeting.room} - {meeting.company.name}
         </h3>
         <p>
           {formatTime(meeting.time.start)} - {formatTime(meeting.time.end)}

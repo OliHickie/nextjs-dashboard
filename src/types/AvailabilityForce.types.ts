@@ -4,7 +4,7 @@ export type AvailabilityForce = {
     id: number;
     name: string;
   };
-  name: string;
+  room: string;
   time: {
     start: string;
     end: string;
