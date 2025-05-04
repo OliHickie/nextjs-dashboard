@@ -1,7 +1,7 @@
 'use client'
 
 type SelectMenuProps = {
-  options: {
+  options?: {
     id: string;
     label: string;
   }[];
@@ -13,11 +13,15 @@ const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel }
   return (
     <div >
       <select className={className} aria-label={ariaLabel}>
-        {options.map((option) => (
-          <option key={option.id} value={option.id}>
-            {option.label}
-          </option>
-        ))}
+        {options && options.length > 0 ? (
+          options.map((option) => (
+        <option key={option.id} value={option.id}>
+          {option.label}
+        </option>
+          ))
+        ) : (
+          <option value="null">-</option>
+        )}
       </select>
     </div>
   );

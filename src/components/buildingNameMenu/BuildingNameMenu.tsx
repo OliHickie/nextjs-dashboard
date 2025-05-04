@@ -7,7 +7,7 @@ import styles from "./BuildingNameMenu.module.scss";
 
 
 const BuildingNameMenu = () => {
-  const [buildings, setBuildings] = useState<{ id: string; label: string }[] | null>(null);
+  const [buildings, setBuildings] = useState<{ id: string; label: string }[]>([]);
 
   useEffect(() => {
     const fetchBuildingNames = async () => {
@@ -26,7 +26,13 @@ const BuildingNameMenu = () => {
     fetchBuildingNames();
   }, []);
 
-  return buildings ? <SelectMenu options={buildings} className={styles.selectMenu} ariaLabel="Building name select" /> : null;
+  return (
+    <SelectMenu
+      options={buildings}
+      className={styles.selectMenu}
+      ariaLabel="Building name select" 
+    />
+  );
 };
 
 export default BuildingNameMenu;
