@@ -21,16 +21,16 @@ describe("Utility Functions", () => {
 
   describe("sortByDate", () => {
     it("should sort dates in descending order", () => {
-      const date1 = new Date(2022, 5, 1);
-      const date2 = new Date(2023, 5, 1);
+      const date1 = new Date(2024, 5, 1);
+      const date2 = new Date(2025, 5, 1);
       
       expect(sortByDate(date1, date2)).toBeGreaterThan(0);
       expect(sortByDate(date2, date1)).toBeLessThan(0);
     });
 
     it("should handle string date inputs", () => {
-      const date1 = "2022-01-01T00:00:00Z";
-      const date2 = "2023-01-01T00:00:00Z";
+      const date1 = "2024-01-01T00:00:00Z";
+      const date2 = "2025-01-01T00:00:00Z";
       
       expect(sortByDate(date1, date2)).toBeGreaterThan(0);
     });
