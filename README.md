@@ -94,6 +94,10 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
+
+# to build the project
+npm run build 
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
