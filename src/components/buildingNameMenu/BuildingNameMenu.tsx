@@ -36,7 +36,7 @@ const BuildingNameMenu = () => {
     };
 
     fetchBuildingNames();
-  }, [buildingId, setBuildingId]);
+  }, [buildingId]);
 
   return (
     <SelectMenu

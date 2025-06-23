@@ -1,8 +1,6 @@
 import { AvailabilityForce } from "@/types/AvailabilityForce.types";
 import data from "@/data/AvailabilityForce.json";
 
-const buildingId = 1;
-
 export const getAvailabilityForce = async (
   buildingId: number
 ): Promise<AvailabilityForce[]> => {
