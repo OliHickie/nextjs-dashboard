@@ -62,7 +62,6 @@ Features still to create include:
 ### Functionality
 - Better error handling with APIs (errors are currently just appear in console)
 - Inclusion of state management to store API responses and building selection.
-- Responsive calls depending on Building selected in dropdown.
 - A click-outside function to close the Notifications and Tickets tool bar.
 - Implement a list of Notifications. 
 - A late decision to include date-fns library to handle date formatting. This should be applied to all Date utitlities for consistency. 
