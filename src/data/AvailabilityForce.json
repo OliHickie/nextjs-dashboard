@@ -1,69 +1,212 @@
-{
-  "data": [
-    {
-      "id": 1,
-      "company": {
-        "id": 1,
-        "name": "ACME CORP"
-      },
-      "room": "MR.0X",
-      "time": {
-        "start": "2025-05-04T08:30:00Z",
-        "end": "2025-05-04T10:30:00Z"
-      },
-      "createdAt": "2025-05-01T08:30:00Z"
+[
+  {
+    "id": 1,
+    "buildingId": 1,
+    "company": {
+      "id": 101,
+      "name": "Company X"
     },
-    {
-      "id": 2,
-      "company": {
-        "id": 1,
-        "name": "ACME CORP"
-      },
-      "room": "MR.0X",
-      "time": {
-        "start": "2025-05-04T08:30:00Z",
-        "end": "2025-05-04T10:30:00Z"
-      },
-      "createdAt": "2025-05-01T08:30:00Z"
+    "room": "MR.01",
+    "time": {
+      "start": "2025-05-04T08:00:00Z",
+      "end": "2025-05-04T09:00:00Z"
     },
-    {
-      "id": 3,
-      "company": {
-        "id": 1,
-        "name": "ACME CORP"
-      },
-      "room": "MR.0X",
-      "time": {
-        "start": "2025-05-04T08:30:00Z",
-        "end": "2025-05-04T10:30:00Z"
-      },
-      "createdAt": "2025-05-01T08:30:00Z"
+    "createdAt": "2025-05-01T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "buildingId": 1,
+    "company": {
+      "id": 102,
+      "name": "Company Y"
     },
-    {
-      "id": 4,
-      "company": {
-        "id": 1,
-        "name": "ACME CORP"
-      },
-      "room": "MR.0X",
-      "time": {
-        "start": "2025-05-04T08:30:00Z",
-        "end": "2025-05-04T10:30:00Z"
-      },
-      "createdAt": "2025-05-01T08:30:00Z"
+    "room": "MR.02",
+    "time": {
+      "start": "2025-05-04T09:15:00Z",
+      "end": "2025-05-04T10:00:00Z"
     },
-    {
-      "id": 5,
-      "company": {
-        "id": 1,
-        "name": "ACME CORP"
-      },
-      "room": "MR.0X",
-      "time": {
-        "start": "2025-05-04T08:30:00Z",
-        "end": "2025-05-04T10:30:00Z"
-      },
-      "createdAt": "2025-05-01T08:30:00Z"
-    }
-  ]
-}
+    "createdAt": "2025-05-01T08:30:00Z"
+  },
+  {
+    "id": 3,
+    "buildingId": 1,
+    "company": {
+      "id": 103,
+      "name": "Company Z"
+    },
+    "room": "MR.03",
+    "time": {
+      "start": "2025-05-04T10:30:00Z",
+      "end": "2025-05-04T11:30:00Z"
+    },
+    "createdAt": "2025-05-01T08:30:00Z"
+  },
+  {
+    "id": 4,
+    "buildingId": 1,
+    "company": {
+      "id": 101,
+      "name": "Company X"
+    },
+    "room": "MR.04",
+    "time": {
+      "start": "2025-05-04T12:00:00Z",
+      "end": "2025-05-04T13:30:00Z"
+    },
+    "createdAt": "2025-05-01T08:30:00Z"
+  },
+  {
+    "id": 5,
+    "buildingId": 1,
+    "company": {
+      "id": 102,
+      "name": "Company Y"
+    },
+    "room": "MR.05",
+    "time": {
+      "start": "2025-05-04T14:00:00Z",
+      "end": "2025-05-04T15:00:00Z"
+    },
+    "createdAt": "2025-05-01T08:30:00Z"
+  },
+  {
+    "id": 6,
+    "buildingId": 2,
+    "company": {
+      "id": 104,
+      "name": "Company A"
+    },
+    "room": "MR.11",
+    "time": {
+      "start": "2025-05-05T08:00:00Z",
+      "end": "2025-05-05T09:00:00Z"
+    },
+    "createdAt": "2025-05-02T08:00:00Z"
+  },
+  {
+    "id": 7,
+    "buildingId": 2,
+    "company": {
+      "id": 105,
+      "name": "Company B"
+    },
+    "room": "MR.12",
+    "time": {
+      "start": "2025-05-05T09:15:00Z",
+      "end": "2025-05-05T10:00:00Z"
+    },
+    "createdAt": "2025-05-02T08:00:00Z"
+  },
+  {
+    "id": 8,
+    "buildingId": 2,
+    "company": {
+      "id": 106,
+      "name": "Company C"
+    },
+    "room": "MR.13",
+    "time": {
+      "start": "2025-05-05T10:30:00Z",
+      "end": "2025-05-05T11:30:00Z"
+    },
+    "createdAt": "2025-05-02T08:00:00Z"
+  },
+  {
+    "id": 9,
+    "buildingId": 2,
+    "company": {
+      "id": 104,
+      "name": "Company A"
+    },
+    "room": "MR.14",
+    "time": {
+      "start": "2025-05-05T12:00:00Z",
+      "end": "2025-05-05T13:30:00Z"
+    },
+    "createdAt": "2025-05-02T08:00:00Z"
+  },
+  {
+    "id": 10,
+    "buildingId": 2,
+    "company": {
+      "id": 105,
+      "name": "Company B"
+    },
+    "room": "MR.15",
+    "time": {
+      "start": "2025-05-05T14:00:00Z",
+      "end": "2025-05-05T15:00:00Z"
+    },
+    "createdAt": "2025-05-02T08:00:00Z"
+  },
+  {
+    "id": 11,
+    "buildingId": 3,
+    "company": {
+      "id": 107,
+      "name": "Company M"
+    },
+    "room": "MR.21",
+    "time": {
+      "start": "2025-05-06T08:00:00Z",
+      "end": "2025-05-06T09:00:00Z"
+    },
+    "createdAt": "2025-05-03T08:00:00Z"
+  },
+  {
+    "id": 12,
+    "buildingId": 3,
+    "company": {
+      "id": 108,
+      "name": "Company N"
+    },
+    "room": "MR.22",
+    "time": {
+      "start": "2025-05-06T09:15:00Z",
+      "end": "2025-05-06T10:00:00Z"
+    },
+    "createdAt": "2025-05-03T08:00:00Z"
+  },
+  {
+    "id": 13,
+    "buildingId": 3,
+    "company": {
+      "id": 109,
+      "name": "Company O"
+    },
+    "room": "MR.23",
+    "time": {
+      "start": "2025-05-06T10:30:00Z",
+      "end": "2025-05-06T11:30:00Z"
+    },
+    "createdAt": "2025-05-03T08:00:00Z"
+  },
+  {
+    "id": 14,
+    "buildingId": 3,
+    "company": {
+      "id": 107,
+      "name": "Company M"
+    },
+    "room": "MR.24",
+    "time": {
+      "start": "2025-05-06T12:00:00Z",
+      "end": "2025-05-06T13:30:00Z"
+    },
+    "createdAt": "2025-05-03T08:00:00Z"
+  },
+  {
+    "id": 15,
+    "buildingId": 3,
+    "company": {
+      "id": 108,
+      "name": "Company N"
+    },
+    "room": "MR.25",
+    "time": {
+      "start": "2025-05-06T14:00:00Z",
+      "end": "2025-05-06T15:00:00Z"
+    },
+    "createdAt": "2025-05-03T08:00:00Z"
+  }
+]

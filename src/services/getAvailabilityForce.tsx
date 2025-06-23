@@ -1,7 +1,11 @@
 import { AvailabilityForce } from "@/types/AvailabilityForce.types";
 import data from "@/data/AvailabilityForce.json";
 
-export const getAvailabilityForce = async (): Promise<AvailabilityForce[]> => {
+const buildingId = 1;
+
+export const getAvailabilityForce = async (
+  buildingId: number
+): Promise<AvailabilityForce[]> => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  return data.data;
+  return data.filter((item) => item.buildingId === buildingId);
 };
