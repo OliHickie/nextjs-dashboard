@@ -19,11 +19,14 @@ const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel, 
   return (
     <div >
       <select className={className} aria-label={ariaLabel} onChange={handleChange}>
+        <option value="" disabled hidden>
+          Select building
+        </option>
         {options && options.length > 0 ? (
           options.map((option) => (
-        <option key={option.id} value={option.id}>
-          {option.label}
-        </option>
+            <option key={option.id} value={option.id}>
+              {option.label}
+            </option>
           ))
         ) : (
           <option value="null">-</option>

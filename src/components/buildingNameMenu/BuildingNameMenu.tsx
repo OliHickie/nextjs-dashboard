@@ -6,10 +6,16 @@ import { getBuildingNames } from "@/services/getBuildingNames.services";
 import { useBuilding } from "@/context/BuildingContext";
 import styles from "./BuildingNameMenu.module.scss";
 
-
 const BuildingNameMenu = () => {
   const [buildings, setBuildings] = useState<{ id: string; label: string }[]>([]);
-  const { setBuildingId } = useBuilding();
+  const { buildingId, setBuildingId } = useBuilding();
+
+  const selectBuilding = (id: string) => {
+    const numericId = Number(id);
+    if (!isNaN(numericId)) {
+      setBuildingId(numericId);
+    }
+  };
 
   useEffect(() => {
     const fetchBuildingNames = async () => {
@@ -20,27 +26,24 @@ const BuildingNameMenu = () => {
           label: building.name,
         }));
         setBuildings(mappedBuildings);
+
+        if (mappedBuildings.length > 0 && buildingId === null) {
+          selectBuilding(mappedBuildings[0].id);
+        }
       } catch (error) {
         console.error("Error fetching building names:", error);
       }
     };
 
     fetchBuildingNames();
-  }, []);
-
-  const handleChange = (id: string) => {
-    const numericId = Number(id);
-    if (!isNaN(numericId)) {
-      setBuildingId(numericId);
-    }
-  };
+  }, [buildingId, setBuildingId]);
 
   return (
     <SelectMenu
       options={buildings}
       className={styles.selectMenu}
       ariaLabel="Building name select"
-      onChange={handleChange}
+      onChange={selectBuilding}
     />
   );
 };
