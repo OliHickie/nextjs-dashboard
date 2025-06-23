@@ -7,12 +7,18 @@ type SelectMenuProps = {
   }[];
   className?: string;
   ariaLabel: string;
+  onChange?: (id: string) => void;
 };
 
-const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel }: SelectMenuProps) => {
+const SelectMenu: React.FC<SelectMenuProps> = ({ options, className, ariaLabel, onChange }: SelectMenuProps) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    onChange?.(e.target.value);
+  };
+
   return (
     <div >
-      <select className={className} aria-label={ariaLabel}>
+      <select className={className} aria-label={ariaLabel} onChange={handleChange}>
         {options && options.length > 0 ? (
           options.map((option) => (
         <option key={option.id} value={option.id}>

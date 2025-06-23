@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import styles from './layout.module.scss'
 import MainNav from "@/components/navigations/MainNav";
 import SecondaryNav from "@/components/navigations/SecondaryNav";
+import { BuildingProvider } from "@/context/BuildingContext";
 
 
 export const metadata: Metadata = {
@@ -17,15 +18,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={styles.mainNav}>
-          <MainNav />
-        </div>
-        <main className={styles.mainContent}>
-          {children}
-        </main>
-        <div className={styles.secondaryNav}>
-          <SecondaryNav />
-        </div>
+        <BuildingProvider>
+          <div className={styles.mainNav}>
+            <MainNav />
+          </div>
+            <main className={styles.mainContent}>
+              {children}
+            </main>
+          <div className={styles.secondaryNav}>
+            <SecondaryNav />
+          </div>
+        </BuildingProvider>
       </body>
     </html>
   );

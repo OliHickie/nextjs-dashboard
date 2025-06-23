@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react"; 
 import SelectMenu from "@/components/selectMenu/SelectMenu";
 import { getBuildingNames } from "@/services/getBuildingNames.services";
+import { useBuilding } from "@/context/BuildingContext";
 import styles from "./BuildingNameMenu.module.scss";
 
 
 const BuildingNameMenu = () => {
   const [buildings, setBuildings] = useState<{ id: string; label: string }[]>([]);
+  const { setBuildingId } = useBuilding();
 
   useEffect(() => {
     const fetchBuildingNames = async () => {
@@ -26,11 +28,19 @@ const BuildingNameMenu = () => {
     fetchBuildingNames();
   }, []);
 
+  const handleChange = (id: string) => {
+    const numericId = Number(id);
+    if (!isNaN(numericId)) {
+      setBuildingId(numericId);
+    }
+  };
+
   return (
     <SelectMenu
       options={buildings}
       className={styles.selectMenu}
-      ariaLabel="Building name select" 
+      ariaLabel="Building name select"
+      onChange={handleChange}
     />
   );
 };
